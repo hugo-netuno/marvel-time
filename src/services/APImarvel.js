@@ -5,7 +5,7 @@ const API_URL = 'https://marvel-time.herokuapp.com';
 function apiLogin(
   email,
   password,
-  ) {
+) {
   return axios
     .post(`${API_URL}/login`, {
       email,
@@ -13,19 +13,22 @@ function apiLogin(
     })
     .then((res) => res.data)
     .catch((error) => {
-      if (error.response){
+      if (error.response) {
 
         console.log(error.response);
-        
-        }else if(error.request){
-        
-          console.log(error.request);
-        
-        }else if(error.message){
-        
-          console.log(error.message);
-        
-        }
+        alert(error.response.data.message);
+
+      } else if (error.request) {
+
+        console.log(error.request);
+        alert(error.request);
+
+      } else if (error.message) {
+
+        console.log(error.message);
+        alert(error.message);
+
+      }
     });
 }
 
@@ -33,7 +36,7 @@ function apiRegisterUser(
   displayName,
   email,
   password,
-  ) {
+) {
   return axios
     .post(`${API_URL}/user`, {
       displayName,
@@ -42,22 +45,22 @@ function apiRegisterUser(
     })
     .then((res) => res.data)
     .catch((error) => {
-      if (error.response){
+      if (error.response) {
 
         console.log(error.response);
         alert(error.response.data.message);
-        
-        }else if(error.request){
-        
-          console.log(error.request);
-          alert(error.request);
-        
-        }else if(error.message){
-        
-          console.log(error.message);
-          alert(error.message);
-        
-        }
+
+      } else if (error.request) {
+
+        console.log(error.request);
+        alert(error.request);
+
+      } else if (error.message) {
+
+        console.log(error.message);
+        alert(error.message);
+
+      }
     });
 }
 export {
