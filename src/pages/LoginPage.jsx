@@ -1,7 +1,9 @@
+// import { useHistory } from "react-router-dom";
 import { apiLogin } from '../services/APImarvel';
 import './pagesStyle.css';
 
 const LoginPage = () => {
+  // const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = document.querySelector("#email").value;
@@ -9,12 +11,13 @@ const LoginPage = () => {
     const loginResponse = await apiLogin(
       email,
       password,
-    );
-    console.log(loginResponse);
-    // alert("Login successful");
-  };
-  return (
-    <div className="bground">
+      );
+      console.log(loginResponse);
+      // alert("Login successful");
+    };
+    history.push("/login");
+    return (
+      <div className="bground">
       <div className="myStyle">
         <h1 className='loginTitle'>Welcome!</h1>
         <div className="align">
