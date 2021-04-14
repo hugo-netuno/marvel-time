@@ -5,7 +5,7 @@ import './pagesStyle.css';
 
 const LoginPage = () => {
   const history = useHistory();
-  const createAccount = useRef(null);
+  const createAccount = useRef();
   console.log(createAccount);
   createAccount.current.addEventListener("click", function() {
     history.push("/user");
