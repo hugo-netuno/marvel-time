@@ -8,7 +8,7 @@ const CharactersPage = () => {
   return (
     <div className="bground">
       <div className="myStyle">
-        <h1 className='title'>Marvel cge;s</h1>
+        <h1 className='title'>Marvel characters</h1>
         <div className="align">
           <h1>to do: Favorite toggle</h1>
         </div>
