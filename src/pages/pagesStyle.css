@@ -40,7 +40,7 @@
   padding-top: 10%;
 } */
 
-.loginTitle, .registerUserTitle, homeTitle {
+.loginTitle, .registerUserTitle, .homeTitle {
   width: 100%;
   margin-left: 5%;
   margin-right: 10%;
