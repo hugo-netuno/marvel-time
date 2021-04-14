@@ -21,6 +21,10 @@ const loginValidation = async (req, res) => {
     const err = validationErrors.invalidDataError();
     return res.status(err.status).json(err);
   }
+  if (password !== user.dataValues.password) {
+    const err = validationErrors.invalidUserPasswordError();
+    return res.status(err.status).json(err);
+  }
   const token = generateToken(email);
   return res.status(200).json({ token });
 };

@@ -31,7 +31,7 @@ const passwordLengthError = () => {
 const userExistisError = () => {
   const err = {};
   err.status = '409';
-  err.message = 'Usuário já existe';
+  err.message = 'User already exists';
   return err;
 };
 const emptyEmailError = () => {
@@ -76,6 +76,12 @@ const userError = () => {
   err.message = 'Unauthorized user';
   return err;
 };
+const invalidUserPasswordError = () => {
+  const err = {};
+  err.status = '401';
+  err.message = 'Unauthorized user';
+  return err;
+};
 
 module.exports = {
   nameLengthError,
@@ -91,4 +97,5 @@ module.exports = {
   invalidTokenError,
   userDoesNotExistsError,
   userError,
+  invalidUserPasswordError,
 };
