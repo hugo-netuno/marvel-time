@@ -1,10 +1,11 @@
 import { useHistory } from "react-router-dom";
+import { useRef } from 'react';
 import { apiLogin } from '../services/APImarvel';
 import './pagesStyle.css';
 
 const LoginPage = () => {
   const history = useHistory();
-  const createAccount = document.querySelector("#createAccount");
+  const createAccount = useRef(null);
   createAccount.addEventListener("click", function() {
     history.push("/user");
   });
@@ -38,7 +39,7 @@ const LoginPage = () => {
         </div>
       </div>
       <div>
-        <h1 id="createAccount">New around here? Create an account now...</h1>
+        <h1 className="createAccount" ref={createAccount}>New around here? Create an account now...</h1>
       </div>
       <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
