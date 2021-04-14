@@ -20,7 +20,7 @@ const LoginPage = () => {
   return (
     <div className="bground">
       <div className="myStyle">
-        <h1 className='loginTitle'>Welcome!</h1>
+        <h1 className='title'>Welcome!</h1>
         <div className="align">
           <h2>Login</h2>
           <form className="loginForm" onSubmit={(e) => handleSubmit(e)}>

@@ -17,7 +17,7 @@ const RegisterUserPage = () => {
   return (
     <div className="bground">
       <div className="myStyle">
-        <h1 className='registerUserTitle'>CreateAccount</h1>
+        <h1 className='title'>CreateAccount</h1>
         <div className="align">
           <h2>Submit fields</h2>
           <form className="loginForm" onSubmit={(e) => handleSubmit(e)}>
