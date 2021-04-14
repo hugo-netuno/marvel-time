@@ -11,7 +11,7 @@ const LoginPage = () => {
       password,
     );
     alert("Login successful");
-  }
+  };
   return (
     <div className="bground">
       <div className="myStyle">
@@ -29,7 +29,7 @@ const LoginPage = () => {
           </form>
         </div>
       </div>
-      <footer className='details-footer'>MARVEL APP</footer>
+      <footer className='footer'>MARVEL APP</footer>
     </div>
   );
 };
