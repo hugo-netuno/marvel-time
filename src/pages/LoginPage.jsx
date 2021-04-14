@@ -1,15 +1,9 @@
-import { useHistory } from "react-router-dom";
-import { useRef } from 'react';
+import { useHistory, Link } from "react-router-dom";
 import { apiLogin } from '../services/APImarvel';
 import './pagesStyle.css';
 
 const LoginPage = () => {
   const history = useHistory();
-  const createAccount = useRef("createAccount");
-  console.log(createAccount);
-  createAccount.current.addEventListener("click", function() {
-    history.push("/user");
-  });
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = document.querySelector("#email").value;
@@ -17,13 +11,14 @@ const LoginPage = () => {
     const loginResponse = await apiLogin(
       email,
       password,
-      );
-      console.log(typeof loginResponse);
-      // alert("Login successful");
-    };
-    // history.push("/login");
-    return (
-      <div className="bground">
+    );
+    if (loginResponse) {
+      alert("Login successful");
+      history.push("/home");
+    }
+  };
+  return (
+    <div className="bground">
       <div className="myStyle">
         <h1 className='loginTitle'>Welcome!</h1>
         <div className="align">
@@ -40,7 +35,7 @@ const LoginPage = () => {
         </div>
       </div>
       <div>
-        <h1 className="createAccount" ref={createAccount}>New around here? Create an account now...</h1>
+        <Link className="links" to={`/user`}>New around here? Create an account now...</Link>
       </div>
       <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
