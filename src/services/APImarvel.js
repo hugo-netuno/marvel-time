@@ -45,14 +45,17 @@ function apiRegisterUser(
       if (error.response){
 
         console.log(error.response);
+        alert(error.response.data.message);
         
         }else if(error.request){
         
           console.log(error.request);
+          alert(error.request);
         
         }else if(error.message){
         
           console.log(error.message);
+          alert(error.message);
         
         }
     });
