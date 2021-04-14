@@ -12,7 +12,7 @@ const LoginPage = () => {
       email,
       password,
       );
-      console.log(loginResponse);
+      console.log(typeof loginResponse);
       // alert("Login successful");
     };
     // history.push("/login");
