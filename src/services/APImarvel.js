@@ -6,7 +6,7 @@ function apiLogin(
   displayName,
   password,
   ) {
-    console.log(displayName);
+    console.log(typeof displayName);
     console.log(password);
   return axios
     .post(`${API_URL}/login`, {

@@ -11,6 +11,6 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static(buildPath));
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+// app.use(express.urlencoded({extended: true}));
 app.use('/', appRouter);
 app.listen(PORT, () => console.log(`ouvindo porta ${PORT}`));
