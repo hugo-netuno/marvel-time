@@ -4,22 +4,3 @@
 .listContainer ul li{
   padding-bottom: 10px;
 }
-
-.hoverlist {
-  display: flex;
-  flex-flow: column;
-  color: white;
-  background-color: DodgerBlue;
-  font-family: Arial;
-  padding: 2%;
-}
-
-li {
-  padding: 1%;
-}
-
-.hoverlist li:hover {
-  background-color: yellow;
-  color: DodgerBlue;
-  padding: 2%;
-}

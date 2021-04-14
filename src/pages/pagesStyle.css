@@ -75,6 +75,25 @@
   border-radius: 5px;
 }
 
+.optionsList {
+  display: flex;
+  flex-flow: column;
+  color: white;
+  background-color: DodgerBlue;
+  font-family: Arial;
+  padding: 2%;
+}
+
+.optionsList li {
+  padding: 1%;
+}
+
+.optionsList li:hover {
+  background-color: yellow;
+  color: DodgerBlue;
+  padding: 2%;
+}
+
 .footer {
   width: 100%;
   padding: 3%;

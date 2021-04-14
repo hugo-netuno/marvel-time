@@ -6,11 +6,12 @@ const UserHomePage = () => {
       <div className="myStyle">
         <h1 className='homeTitle'>Home</h1>
         <div className="align">
-          <h2>Options</h2>
+          <h2>Options:</h2>
           <ul>
             <li>Edit account settings</li>
             <li>View Marvel comics</li>
             <li>View Marvel characters</li>
+            <li>Logout</li>
           </ul>
         </div>
       </div>
