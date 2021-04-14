@@ -6,11 +6,12 @@ const LoginPage = () => {
     e.preventDefault();
     const displayName = document.querySelector("#displayName").value;
     const password = document.querySelector("#password").value;
-    await apiLogin(
+    const loginResponse = await apiLogin(
       displayName,
       password,
     );
-    alert("Login successful");
+    console.log(loginResponse);
+    // alert("Login successful");
   };
   return (
     <div className="bground">
