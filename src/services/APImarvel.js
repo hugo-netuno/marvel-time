@@ -14,7 +14,21 @@ function apiLogin(
       password,
     })
     .then((res) => res.data)
-    .catch((err) => console.log('bad?', err));
+    .catch((error) => {
+      if (error.response){
+
+        console.log(error.response);
+        
+        }else if(error.request){
+        
+          console.log(error.request);
+        
+        }else if(error.message){
+        
+          console.log(error.message);
+        
+        }
+    });
 }
 export {
   apiLogin,
