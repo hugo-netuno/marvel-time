@@ -48,6 +48,7 @@
 .align input{
   display: flex;
   align-self: right;
+  margin-right: 2%;
 }
 
 .submit {
@@ -66,6 +67,12 @@
 .links {
   margin: 10px;
   color: white;
+}
+
+.createAccount {
+  margin: auto;
+  padding-top: 20%;
+  font-size: xx-large;
 }
 
 .links:hover {
@@ -96,7 +103,6 @@
 .optionsList li:hover {
   background-color: yellow;
   color: DodgerBlue;
-  padding: 2%;
 }
 
 .footer {

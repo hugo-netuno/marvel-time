@@ -1,7 +1,9 @@
+import { useHistory } from "react-router-dom";
 import { apiRegisterUser } from '../services/APImarvel';
 import './pagesStyle.css';
 
 const RegisterUserPage = () => {
+  const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const displayName = document.querySelector("#displayName").value;
@@ -12,7 +14,10 @@ const RegisterUserPage = () => {
       email,
       password,
     );
-    console.log(registerUserResponse);
+    if (registerUserResponse) {
+      alert("Account created successfully");
+      history.push("/home");
+    }
   };
   return (
     <div className="bground">
