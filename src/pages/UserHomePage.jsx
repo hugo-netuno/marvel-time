@@ -9,7 +9,7 @@ const UserHomePage = () => {
           <h2>Options</h2>
         </div>
       </div>
-      <footer className='footer'>MARVEL APP</footer>
+      <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
   );
 };

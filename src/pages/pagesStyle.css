@@ -78,8 +78,8 @@
 
 .footer {
   width: 100%;
-  margin-bottom: 0;
-  padding-bottom: 10%;
+  position: fixed;
+  bottom: 0;
 }
 
 /* .detalhesContainer {

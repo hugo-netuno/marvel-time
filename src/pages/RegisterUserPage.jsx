@@ -34,7 +34,7 @@ const RegisterUserPage = () => {
           </form>
         </div>
       </div>
-      <footer className='footer'>MARVEL APP</footer>
+      <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
   );
 };

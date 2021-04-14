@@ -35,7 +35,7 @@ const LoginPage = () => {
         </div>
       </div>
       <div>
-        <Link className="links" to={`/user`}>New around here? Create an account now...</Link>
+        <Link className="links" to={`/register`}>New around here? Create an account now...</Link>
       </div>
       <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
