@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { apiRegisterUser } from '../services/APImarvel';
+import { apiRegisterUser } from '../services/APIdatabase';
 import './pagesStyle.css';
 
 const RegisterUserPage = () => {
