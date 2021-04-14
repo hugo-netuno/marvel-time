@@ -9,10 +9,10 @@ const UserHomePage = () => {
         <div className="align">
           <h2>Options:</h2>
           <ul className="optionsList">
-            <li><Link to={`/`}>Edit account settings</Link>/</li>
-            <li><Link to={`/comics`}>View Marvel comics</Link></li>
-            <li><Link to={`/characters`}>View Marvel characters</Link></li>
-            <li><Link to={`/`}>Logout</Link></li>
+            <li><Link className="optionsLinks" to={`/`}>Edit account settings</Link></li>
+            <li><Link className="optionsLinks" to={`/comics`}>View Marvel comics</Link></li>
+            <li><Link className="optionsLinks" to={`/characters`}>View Marvel characters</Link></li>
+            <li><Link className="optionsLinks" to={`/`}>Logout</Link></li>
           </ul>
         </div>
       </div>
