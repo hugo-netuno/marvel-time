@@ -15,7 +15,7 @@ const LoginPage = () => {
       console.log(loginResponse);
       // alert("Login successful");
     };
-    history.push("/login");
+    // history.push("/login");
     return (
       <div className="bground">
       <div className="myStyle">

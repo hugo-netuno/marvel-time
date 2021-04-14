@@ -28,6 +28,36 @@ function apiLogin(
         }
     });
 }
+
+function apiRegisterUser(
+  displayName,
+  email,
+  password,
+  ) {
+  return axios
+    .post(`${API_URL}/user`, {
+      displayName,
+      email,
+      password,
+    })
+    .then((res) => res.data)
+    .catch((error) => {
+      if (error.response){
+
+        console.log(error.response);
+        
+        }else if(error.request){
+        
+          console.log(error.request);
+        
+        }else if(error.message){
+        
+          console.log(error.message);
+        
+        }
+    });
+}
 export {
   apiLogin,
+  apiRegisterUser,
 };
