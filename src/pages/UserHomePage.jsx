@@ -10,10 +10,10 @@ const UserHomePage = () => {
         <div className="align">
           <h2>Options:</h2>
           <ul className="optionsList">
-            <li onClick={history.push("/")}>Edit account settings</li>
-            <li onClick={history.push("/comics")}>View Marvel comics</li>
-            <li  onClick={history.push("/characters")}>View Marvel characters</li>
-            <li onClick={history.push("/")}>Logout</li>
+            <li onEvent={"click", history.push("/")}>Edit account settings</li>
+            <li onEvent={"click", history.push("/comics")}>View Marvel comics</li>
+            <li  onEvent={"click", history.push("/characters")}>View Marvel characters</li>
+            <li onEvent={"click", history.push("/")}>Logout</li>
           </ul>
         </div>
       </div>
