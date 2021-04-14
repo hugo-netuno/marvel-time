@@ -3,14 +3,14 @@ const axios = require('axios');
 const API_URL = 'https://marvel-time.herokuapp.com';
 
 function apiLogin(
-  displayName,
+  email,
   password,
   ) {
-    console.log(typeof displayName);
+    console.log(typeof email);
     console.log(password);
   return axios
     .post(`${API_URL}/login`, {
-      displayName,
+      email,
       password,
     })
     .then((res) => res.data)

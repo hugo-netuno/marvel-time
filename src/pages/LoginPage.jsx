@@ -4,10 +4,10 @@ import './pagesStyle.css';
 const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const displayName = document.querySelector("#displayName").value;
+    const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
     const loginResponse = await apiLogin(
-      displayName,
+      email,
       password,
     );
     console.log(loginResponse);
@@ -20,8 +20,8 @@ const LoginPage = () => {
         <div className="align">
           <h2>Login</h2>
           <form className="loginForm" onSubmit={(e) => handleSubmit(e)}>
-            <label htmlFor="displayName">Name:
-          <input type="text" name="displayName" id="displayName" />
+            <label htmlFor="email">Email:
+          <input type="text" name="email" id="email" />
             </label>
             <label htmlFor="password">Password:
           <input type="text" name="password" id="password" />
