@@ -1,8 +1,7 @@
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './pagesStyle.css';
 
 const UserHomePage = () => {
-  const history = useHistory();
   return (
     <div className="bground">
       <div className="myStyle">
@@ -10,10 +9,10 @@ const UserHomePage = () => {
         <div className="align">
           <h2>Options:</h2>
           <ul className="optionsList">
-            <li onEvent={"click", history.push("/")}>Edit account settings</li>
-            <li onEvent={"click", history.push("/comics")}>View Marvel comics</li>
-            <li  onEvent={"click", history.push("/characters")}>View Marvel characters</li>
-            <li onEvent={"click", history.push("/")}>Logout</li>
+            <li><Link to={`/`}>Edit account settings</Link>/</li>
+            <li><Link to={`/comics`}>View Marvel comics</Link></li>
+            <li><Link to={`/characters`}>View Marvel characters</Link></li>
+            <li><Link to={`/`}>Logout</Link></li>
           </ul>
         </div>
       </div>
