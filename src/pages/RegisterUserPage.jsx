@@ -1,25 +1,29 @@
-import { apiLogin } from '../services/APImarvel';
+import { apiRegisterUser } from '../services/APImarvel';
 import './pagesStyle.css';
 
-const LoginPage = () => {
+const RegisterUserPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const displayName = document.querySelector("#displayName").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
-    const loginResponse = await apiLogin(
+    const registerUserResponse = await apiRegisterUser(
+      displayName,
       email,
       password,
     );
-    console.log(loginResponse);
-    // alert("Login successful");
+    console.log(registerUserResponse);
   };
   return (
     <div className="bground">
       <div className="myStyle">
-        <h1 className='loginTitle'>Welcome!</h1>
+        <h1 className='registerUserTitle'>CreateAccount</h1>
         <div className="align">
-          <h2>Login</h2>
+          <h2>Submit fields</h2>
           <form className="loginForm" onSubmit={(e) => handleSubmit(e)}>
+            <label htmlFor="displayName">Name:
+          <input type="text" name="displayName" id="displayName" />
+            </label>
             <label htmlFor="email">Email:
           <input type="text" name="email" id="email" />
             </label>
@@ -35,4 +39,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterUserPage;

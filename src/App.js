@@ -8,6 +8,8 @@ import {
 import './App.css';
 // import Provider from './context/Provider';
 import LoginPage from './pages/LoginPage';
+import RegisterUserPage from './pages/RegisterUserPage';
+import UserHomePage from './pages/UserHomePage';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={LoginPage} />
+          <Route exact path="/register" component={RegisterUserPage} />
+          <Route exact path="/home" component={UserHomePage} />
         </Switch>
       </BrowserRouter>
     // </Provider>
