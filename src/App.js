@@ -6,18 +6,18 @@ import {
 } from 'react-router-dom';
 // import logo from './logo.svg';
 import './App.css';
-import Provider from './context/Provider';
+// import Provider from './context/Provider';
 import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
-    <Provider>
+    // <Provider>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={LoginPage} />
         </Switch>
       </BrowserRouter>
-    </Provider>
+    // </Provider>
   );
 }
 
