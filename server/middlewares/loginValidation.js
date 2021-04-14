@@ -17,6 +17,7 @@ const loginValidation = async (req, res) => {
     return res.status(err.status).json(err);
   }
   const user = await checkEmail(email);
+  console.log('user: ', user);
   if (!user) {
     const err = validationErrors.invalidDataError();
     return res.status(err.status).json(err);
