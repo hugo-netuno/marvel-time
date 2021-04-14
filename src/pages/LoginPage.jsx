@@ -1,9 +1,13 @@
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { apiLogin } from '../services/APImarvel';
 import './pagesStyle.css';
 
 const LoginPage = () => {
-  // const history = useHistory();
+  const history = useHistory();
+  const createAccount = document.querySelector("#createAccount");
+  createAccount.addEventListener("click", function() {
+    history.push("/user");
+  });
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = document.querySelector("#email").value;
@@ -33,7 +37,10 @@ const LoginPage = () => {
           </form>
         </div>
       </div>
-      <footer className='footer'>MARVEL APP</footer>
+      <div>
+        <h1 id='createAccount'>New around here? Create an account now...</h1>
+      </div>
+      <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
   );
 };
