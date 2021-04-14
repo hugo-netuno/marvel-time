@@ -10,6 +10,8 @@ import './App.css';
 import LoginPage from './pages/LoginPage';
 import RegisterUserPage from './pages/RegisterUserPage';
 import UserHomePage from './pages/UserHomePage';
+import ComicsPage from './pages/ComicsPage';
+import CharactersPage from './pages/CharactersPage';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route exact path="/" component={LoginPage} />
           <Route exact path="/register" component={RegisterUserPage} />
           <Route exact path="/home" component={UserHomePage} />
+          <Route exact path="/comics" component={ComicsPage} />
+          <Route exact path="/characters" component={CharactersPage} />
         </Switch>
       </BrowserRouter>
     // </Provider>
