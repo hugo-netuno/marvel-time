@@ -38,7 +38,7 @@ const LoginPage = () => {
         </div>
       </div>
       <div>
-        <h1 id='createAccount'>New around here? Create an account now...</h1>
+        <h1 id="createAccount">New around here? Create an account now...</h1>
       </div>
       <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
