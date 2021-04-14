@@ -1,0 +1,70 @@
+/* * {
+  border: 1px solid red;
+} */
+.bground {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+}
+
+.myStyle {
+  color: white;
+  background-color: DodgerBlue;
+  font-family: Arial;
+  font-weight: bolder;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+}
+
+/* .myStyleHome {
+  color: white;
+  background-color: DodgerBlue;
+  font-family: Arial;
+  font-weight: bolder;
+  opacity: 0.7;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  padding-bottom: 10px;
+} */
+
+/* .myStyleList {
+  color: white;
+  background-color: DodgerBlue;
+  font-family: Arial;
+  font-weight: bolder;
+  opacity: 0.7;
+  display: flex;
+  padding-top: 10%;
+} */
+
+/* .homeTitle {
+  justify-self: flex-start;
+  margin-left: 15%;
+  margin-right: 10%;
+} */
+
+.align input{
+  display: flex;
+  align-self: right;
+}
+
+.submit {
+  width: min-content;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.loginForm {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+/* .detalhesContainer {
+  display: flex;
+  flex-flow: row;
+} */
