@@ -7,7 +7,7 @@ import {
 // import logo from './logo.svg';
 import './App.css';
 import Provider from './context/Provider';
-import LoginPage from './pages/MainPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
