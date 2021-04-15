@@ -24,7 +24,7 @@
     "build": "react-scripts build && (cd server && npm install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "cd server && npm start"
+    "start": "cd server && npm start -r dotenv/config index.js"
   },
   "eslintConfig": {
     "extends": [
