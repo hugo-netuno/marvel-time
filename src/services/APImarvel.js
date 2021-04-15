@@ -9,12 +9,12 @@ const displayFunction = (myObj) => {
 }
 
 function apiGetComics() {
-  const ts = Date.now();
+  const ts = Date.now().toString();
   return axios
     .post(`${API_URL}/comics`, null, { params: {
       apikey: API_PUBLIC_KEY,
       ts: ts,
-      hash: md5(ts +process.env.API_PRIVATE_KEY+API_PUBLIC_KEY),
+      hash: md5(ts + process.env.API_PRIVATE_KEY + API_PUBLIC_KEY),
       limit: 10,
       callback: displayFunction,
     }})
