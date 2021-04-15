@@ -12,6 +12,7 @@ function apiGetComics() {
   const ts = Date.now().toString();
   console.log('ts', ts);
   console.log('key', process.env.API_PRIVATE_KEY);
+  console.log('env', process.env);
   return axios
     .post(`${API_URL}/comics`, null, { params: {
       apikey: API_PUBLIC_KEY,
