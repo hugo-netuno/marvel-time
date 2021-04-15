@@ -1,4 +1,5 @@
 import { useHistory, Link } from "react-router-dom";
+import ComicsList from "../components/ComicsList";
 import './pagesStyle.css';
 
 const ComicsPage = () => {
@@ -14,7 +15,7 @@ const ComicsPage = () => {
         </div>
       </div>
       <div>
-        <h1>to do: render component</h1>
+        <ComicsList />
       </div>
       <footer className='myStyle footer'>MARVEL APP</footer>
     </div>
