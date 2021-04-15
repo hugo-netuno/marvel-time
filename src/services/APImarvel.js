@@ -1,5 +1,9 @@
 const axios = require('axios');
 const md5 = require('md5');
+const dotenv = require('dotenv');
+
+const result = dotenv.config()
+ 
 
 const API_URL = 'http://gateway.marvel.com/v1/public';
 const API_PUBLIC_KEY = 'cb183e45d5e03ab355243cad123f6443';
@@ -13,8 +17,12 @@ function apiGetComics() {
   console.log('ts', ts);
   console.log('key', process.env.API_PRIVATE_KEY);
   console.log('env', process.env);
+  console.log('r', result.parsed);
+  if (result.error) {
+    throw result.error
+  }
   return axios
-    .post(`${API_URL}/comics`, null, { params: {
+  .post(`${API_URL}/comics`, null, { params: {
       apikey: API_PUBLIC_KEY,
       ts: ts,
       hash: md5(ts + process.env.API_PRIVATE_KEY + API_PUBLIC_KEY),
