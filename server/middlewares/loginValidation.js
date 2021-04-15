@@ -26,9 +26,7 @@ const loginValidation = async (req, res) => {
     return res.status(err.status).json(err);
   }
   const token = generateToken(email);
-  console.log('print', process.env);
-  console.log('token', token);
-  return res.status(200).json( process.env );
+  return res.status(200).json({ token });
 };
 
 module.exports = loginValidation;

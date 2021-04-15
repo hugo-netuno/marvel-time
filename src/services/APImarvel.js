@@ -1,3 +1,4 @@
+require('dotenv').config();
 const axios = require('axios');
 const md5 = require('md5');
 
