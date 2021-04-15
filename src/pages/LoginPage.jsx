@@ -12,10 +12,11 @@ const LoginPage = () => {
       email,
       password,
     );
-    if (loginResponse) {
-      alert("Login successful");
-      history.push("/home");
-    }
+    console.log(loginResponse);
+    // if (loginResponse) {
+    //   alert("Login successful");
+    //   history.push("/home");
+    // }
   };
   return (
     <div className="bground">

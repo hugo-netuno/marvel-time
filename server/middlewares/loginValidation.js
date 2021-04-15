@@ -25,9 +25,10 @@ const loginValidation = async (req, res) => {
     const err = validationErrors.invalidUserPasswordError();
     return res.status(err.status).json(err);
   }
-  console.log('print', process.env);
   const token = generateToken(email);
-  return res.status(200).json({ token });
+  console.log('print', process.env);
+  console.log('token', token);
+  return res.status(200).json( process.env );
 };
 
 module.exports = loginValidation;
