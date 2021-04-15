@@ -1,19 +1,19 @@
 import React, { useContext, useEffect } from 'react';
-import AppContext from '../context/AppContext';
-import { fetchFavsList } from '../services/APImarvel';
+// import AppContext from '../context/AppContext';
+import { apiGetComics } from '../services/APImarvel';
 // import CardFav from './CardFav';
 import './componentsStyle.css';
 
 
-const FavoritesList = () => {
-  const { loading, setLoading } = useContext(AppContext);
+const ComicsList = () => {
+  // const { loading, setLoading } = useContext(AppContext);
   useEffect(() => {
-    fetchFavsList().then((response) => console.log(response))
+    apiGetComics().then((response) => console.log(response))
       .catch((err) => console.error(err));
-      setLoading(false);
-  }, [setLoading]);
+      // setLoading(false);
+  }, []);
   return (
-    !loading ?
+    // !loading ?
     <div className="listContainer">
       <ul className="hoverlist">
         {/* {.map((card) => {
@@ -21,8 +21,8 @@ const FavoritesList = () => {
          } )} */}
       </ul>    
     </div>
-    : <div>Loading...</div>
+    // : <div>Loading...</div>
   );
 };
 
-export default FavoritesList;
+export default ComicsList;

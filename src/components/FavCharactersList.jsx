@@ -5,7 +5,7 @@ import { fetchFavsList } from '../services/APImarvel';
 import './componentsStyle.css';
 
 
-const FavoritesList = () => {
+const FavCharactersList = () => {
   const { loading, setLoading } = useContext(AppContext);
   useEffect(() => {
     fetchFavsList().then((response) => console.log(response))
@@ -25,4 +25,4 @@ const FavoritesList = () => {
   );
 };
 
-export default FavoritesList;
+export default FavCharactersList;
