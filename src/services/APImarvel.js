@@ -10,6 +10,8 @@ const displayFunction = (myObj) => {
 
 function apiGetComics() {
   const ts = Date.now().toString();
+  console.log('ts', ts);
+  console.log('key', process.env.API_PRIVATE_KEY);
   return axios
     .post(`${API_URL}/comics`, null, { params: {
       apikey: API_PUBLIC_KEY,
